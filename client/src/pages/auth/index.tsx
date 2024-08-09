@@ -10,9 +10,12 @@ export const Auth = () => {
   return (
     <div className="sign-in-container">
       <SignedOut>
-        <h1> Welcome to Your Own Personal Finance Tracker!</h1>
-        <SignUpButton mode="modal" />
+        <h1>Welcome to <span>FinYojak</span></h1>
+        <h2>Your Personal Finance Tracker</h2>
+        <div className="signup">
+          <SignUpButton mode="modal" />
         <SignInButton mode="modal" />
+        </div>
       </SignedOut>
       <SignedIn>
         <Navigate to="/" />

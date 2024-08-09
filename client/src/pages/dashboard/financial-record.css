@@ -10,15 +10,21 @@ h2 {
   text-align: center;
 }
 
-/* Form and list container */
+.form-container{
+  padding-left: 10vw;
+  padding-right: 10vw;
+}
 .form-container,
 .list-container {
   margin-bottom: 20px;
 }
 
+.form-container{
+  width:50vw;
+}
 /* Common class for all buttons */
 .button {
-  background-color: #3498db;
+  background-color: #7a7a7a;
   color: #ffffff;
   border: none;
   padding: 8px 15px;
@@ -29,11 +35,11 @@ h2 {
 }
 
 .button:hover {
-  background-color: #2980b9;
+  background-color: #5d5c5c;
 }
 .button-delete {
-  background-color: #343cdb;
-  color: #ffffff;
+  background-color: #a3a3a3;
+  color: #c6a9a9;
   border: none;
   padding: 8px 15px;
   margin: 5px;
@@ -43,7 +49,7 @@ h2 {
 }
 
 .button-delete:hover {
-  background-color: #343cdb;
+  background-color: #4e4e4e;
 }
 
 /* Common class for all input fields and selects */
@@ -52,19 +58,28 @@ h2 {
   padding: 10px;
   margin-top: 5px;
   margin-bottom: 15px;
-  background-color: transparent;
-  border: 1px solid #ccc;
+  background-color: #373737;
+  border: 1px solid #464646;
   border-radius: 5px;
-  color: #3498db;
+  color: #a3a3a3;
 }
 
 /* Labels for better readability */
 label {
+  color: #c05e77;
   font-weight: 600;
   display: block;
   margin-bottom: 5px;
 }
-
+.p{
+  color: #c05e77;
+}
+span{
+  color: #ef6285;
+}
+h2 {
+  color: #FC93AD;
+}
 .table-container {
   margin: 20px;
   overflow-x: auto; /* Enables horizontal scrolling if the table is too wide */
@@ -80,20 +95,26 @@ label {
 .table th,
 .table td {
   padding: 12px 15px;
-  border: 1px solid #ddd; /* Light grey border for cells */
+  border: 1px solid #232121; /* Light grey border for cells */
   text-align: left;
 }
 
+
 .table th {
-  background-color: #3498db; /* Darker blue header background */
+  background-color: #353535; /* Darker blue header background */
   color: white;
   font-size: 16px;
 }
 
 .table tbody tr:nth-child(odd) {
-  background-color: #f2f2f2; /* Zebra striping for rows, light grey */
+  background-color: #565656; /* Zebra striping for rows, light grey */
 }
 
 .table tbody tr:hover {
-  background-color: #e8f4f8; /* Light blue hover effect for rows */
+  background-color: #474747; /* Light blue hover effect for rows */
+}
+
+.total-monthly {
+  font-size: 1.5rem;
+  color: #b2a3a3;
 }

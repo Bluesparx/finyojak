@@ -4,6 +4,7 @@ import {
   useFinancialRecords,
 } from "../../contexts/financial-record-context";
 import { useTable, Column, CellProps, Row } from "react-table";
+import "./financial-record.css"
 
 interface EditableCellProps extends CellProps<FinancialRecord> {
   updateRecord: (rowIndex: number, columnId: string, value: any) => void;
@@ -103,15 +104,20 @@ export const FinancialRecordList = () => {
       },
       {
         Header: "Date",
-        accessor: "date",
-        Cell: (props) => (
+      accessor: "date",
+      Cell: (props) => {
+        const formattedDate = new Date(props.value)
+          .toLocaleDateString('en-GB') ;
+        return (
           <EditableCell
             {...props}
+            value={formattedDate}
             updateRecord={updateCellRecord}
             editable={false}
           />
-        ),
+        );
       },
+    },
       {
         Header: "Delete",
         id: "delete",

@@ -3,8 +3,22 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import { Dashboard } from "./pages/dashboard";
 import { Auth } from "./pages/auth";
 import { FinancialRecordsProvider } from "./contexts/financial-record-context";
-import { SignedIn, UserButton } from "@clerk/clerk-react";
-// import { dark } from "@clerk/themes";
+import { SignedIn, UserButton, SignedOut } from "@clerk/clerk-react";
+
+
+import { Navigate } from "react-router-dom";
+
+const ProtectedRoute = ({ children }) => {
+  return (
+    <>
+      <SignedIn>{children}</SignedIn>
+      <SignedOut>
+        <Navigate to="/auth" />
+      </SignedOut>
+    </>
+  );
+};
+
 
 function App() {
   return (
@@ -20,9 +34,11 @@ function App() {
           <Route
             path="/"
             element={
-              <FinancialRecordsProvider>
-                <Dashboard />
-              </FinancialRecordsProvider>
+              <ProtectedRoute>
+                <FinancialRecordsProvider>
+                  <Dashboard />
+                </FinancialRecordsProvider>
+              </ProtectedRoute>
             }
           />
           <Route path="/auth" element={<Auth />} />
