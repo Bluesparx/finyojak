@@ -5,10 +5,15 @@ import { Auth } from "./pages/auth";
 import { FinancialRecordsProvider } from "./contexts/financial-record-context";
 import { SignedIn, UserButton, SignedOut } from "@clerk/clerk-react";
 
+import React, { ReactNode } from 'react';
 
 import { Navigate } from "react-router-dom";
 
-const ProtectedRoute = ({ children }) => {
+interface AppProps {
+  children: ReactNode;
+}
+
+const ProtectedRoute: React.FC<AppProps> = ({ children })=> {
   return (
     <>
       <SignedIn>{children}</SignedIn>
