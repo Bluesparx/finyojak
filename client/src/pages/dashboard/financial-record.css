@@ -71,11 +71,15 @@ label {
   display: block;
   margin-bottom: 5px;
 }
-.p{
+#note{
   color: #c05e77;
+  text-align: center;
 }
 span{
   color: #ef6285;
+}
+select.input {
+  width: 100%;
 }
 h2 {
   color: #FC93AD;
@@ -98,8 +102,9 @@ h2 {
   border: 1px solid #232121; /* Light grey border for cells */
   text-align: left;
 }
-
-
+.recharts-surface {
+  padding: 20px 15px;
+}
 .table th {
   background-color: #353535; /* Darker blue header background */
   color: white;

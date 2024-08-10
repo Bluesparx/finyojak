@@ -21,7 +21,7 @@ export const Dashboard = () => {
   return (
     <div className="dashboard-container">
       <h1> Welcome {user?.firstName}! Here Are Your Finances:</h1>
-      <p>Please Note: Enter spendings as negative and earnings as positive!</p>
+      <p id="note">Please Note: Enter spendings as negative and earnings as positive!</p>
       <FinancialRecordForm />
       <div className="total-monthly">Total Monthly: ${totalMonthly}</div>
       <div className="display-records">

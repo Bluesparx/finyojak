@@ -1,4 +1,3 @@
-import React from "react";
 import { XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, LineChart, Line } from "recharts";
 import { useFinancialRecords } from "../../contexts/financial-record-context";
 

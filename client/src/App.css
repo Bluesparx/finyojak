@@ -33,12 +33,32 @@ html {
   margin-top: 20vh;
   margin-bottom: 18vh;
   overflow-y: hidden;
+  background-color: #1f1f1f;
 }
 
 .sign-in-container button {
   margin: 10px;
 }
-
+.cl-internal-4x6jej {
+  background-color: #1f1f1f !important;
+  background: local ;
+  color:#FC93AD;
+}
+.cl-internal-1p733cp {
+  background-color: #1f1f1f !important;
+}
+.cl-internal-1p733cp h1, .cl-footerActionText , .cl-footerActionLink,.cl-formFieldLabel, .cl-internal-1p733cp p, .cl-internal-4x6jej p {
+  color: white !important;
+}
+.cl-button__google{
+  background-color: #313131 !important;
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+    transition-duration: 100ms;
+    background: linear-gradient(rgba(255, 255, 255, 0.11) 0%, transparent 100%);
+}
+.cl-footerActionLink:hover {
+  color:#FC93AD !important;
+}
 .navbar a {
   color: #FEFDFB; /* Ensures links are white */
   text-decoration: none;
@@ -55,7 +75,7 @@ html {
 .clerk-user-button {
   background-color: transparent;
   border: none;
-  color: FC93AD;
+  color: #FC93AD;
   cursor: pointer;
 }
 
