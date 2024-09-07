@@ -1,15 +1,18 @@
+import dotenv from 'dotenv';
+dotenv.config();
+
 import express, { Express } from "express";
 import mongoose from "mongoose";
 import financialRecordRouter from "./routes/financial-records";
 import cors from "cors";
 
 const app: Express = express();
-const port = process.env.PORT || 3001;
+const port = process.env.PORT || 5000;
 
 app.use(express.json());
 app.use(cors());
 
-const mongoURI: string = process.env.MONGO_URI || ""
+const mongoURI: string = process.env.MONGO_URI || " "
 
 mongoose
   .connect(mongoURI)
